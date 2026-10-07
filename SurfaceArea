@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+
+int main (){
+
+        int radius;
+        double surfacearea;
+        double PI = 3.14159;
+
+
+        printf("Enter radius of sphere: ");
+        scanf("%d", &radius);
+
+        surfacearea =4 * PI * radius * radius;
+        printf("Surface area of sphere: %.2lf\n", surfacearea);
+
+
+    return 0;
+}
+
+
+
+
+PS C:\Users\lenovo\OneDrive\Documents\Cfolder> cd "c:\Users\lenovo\OneDrive\Documents\Cfolder\" ; if ($?) { gcc surfacearea.c -D __USE_MINGW_ANSI_STDIO=1 -o surfacearea } ; if ($?) { .\surfacearea }
+Enter radius of sphere: 4
+Surface area of sphere: 201.06
