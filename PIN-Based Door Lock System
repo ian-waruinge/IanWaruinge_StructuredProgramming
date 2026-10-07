@@ -1,0 +1,89 @@
+#include <stdio.h>
+
+
+int main(){
+
+
+        int correctPin = 1234;
+        int userPin;
+        int running = 1;
+        char choice;
+
+
+        printf("Enter your pin: ");
+        scanf ("%d" , &userPin);
+
+
+                if (userPin == correctPin){
+                    printf("ACCESS GRANTED\n");
+
+                
+
+                } else if (userPin < 1000){
+                        printf("PIN is too short (must be 4 digits)\n");
+                    } else if (userPin > 9999) {
+                        printf("PIN is too long (must be 4 digits)\n");
+                    } else{
+                        printf("ACCESS DENIED\n");
+                    }
+
+
+
+                    while (running) {
+
+                        printf("\n.....Door Lock System Menu.....\n");
+                        printf("1. Open Door\n");
+                        printf("2. Change Username\n");
+                        printf("3. Change Pin\n");
+                        printf("4. Exit\n");
+                        printf("choose: ");
+                        scanf(" %c", &choice);
+
+
+
+                        switch (choice) {
+                            case '1':
+                                printf("Access granted. Door unlocked\n");
+                                break;
+                            case '2':
+                                printf("Change username feature coming soon.\n");
+                                break;
+                            case '3':
+                                printf("Change pin feature coming soon.\n");
+                                break;
+                            case '4':
+                                printf("Exiting...\n");
+                                running = 0;
+                                break;
+                            default:
+                                printf("Invalid choice. Please try again.\n");
+                        }
+                    }
+    return 0;
+
+}
+
+
+
+Enter your pin: 1234
+ACCESS GRANTED
+
+.....Door Lock System Menu.....
+1. Open Door
+2. Change Username
+3. Change Pin
+4. Exit
+choose: 1
+Access granted. Door unlocked
+
+.....Door Lock System Menu.....
+1. Open Door
+2. Change Username
+3. Change Pin
+4. Exit
+choose: 4
+Exiting...
+
+
+
+ 
